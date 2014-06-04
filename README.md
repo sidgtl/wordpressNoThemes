@@ -1,4 +1,4 @@
-#Wordpress without themes
+#Wordpress Without Themes
 
 ##Introduction
 *Build your front end without the shackles of Wordpress themes!*
@@ -9,4 +9,4 @@ Much of our custom functions have been removed to give an example of getting the
 
 Constants used in example: ```MAX_ARTICLES```, ```APP_PATH```, ```WP_INSTALL_FOLDER```
 
-Blog post: http://sidigital.co/blog/
+Blog post: http://sidigital.co/blog/disconnect-your-frontend-from-wordpress
