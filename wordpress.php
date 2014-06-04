@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog model for interfacing with a Wordpress backend
+ * Model for interfacing with a Wordpress backend
  *
  * @author Alex Crooks, Si digital http://sidigital.co
  **/
