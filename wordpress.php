@@ -54,6 +54,14 @@ class WordpressNoTheme
         }
     }
 
+    // Get 'post' or 'page' etc by id ("id" in wp db)
+    function getEntryById($id, $type = 'post') {
+
+		$getPost = !empty($id) ? get_post($id, 'OBJECT', $type) : false;
+
+		return $getPost && $getPost->post_status == 'publish' ? $getPost : false;
+    }
+	
     function getAttachedImage($id, $type) {
         return wp_get_attachment_url(get_post_meta($id, $type, true));
     }
