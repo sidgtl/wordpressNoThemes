@@ -55,18 +55,11 @@ class WordpressNoTheme
     }
 
     // Get 'post' or 'page' etc by id ("id" in wp db)
-    function getEntryById($id = FALSE, $type = 'post') {
-        if(!$id)
-            return FALSE;
-        $getPost = get_post($id, 'OBJECT', $type);
-        if($getPost) {
-            if($getPost->post_status == "publish")
-                return $getPost;
-            else
-                return false;
-        } else {
-            return false;
-        }
+    function getEntryById($id, $type = 'post') {
+
+        $getPost = !empty($id) ? get_post($id, 'OBJECT', $type) : false;
+
+		return $getPost && $getPost->post_status == 'publish' ? $getPost : false;
     }
 	
     function getAttachedImage($id, $type) {
