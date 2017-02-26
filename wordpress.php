@@ -57,7 +57,7 @@ class WordpressNoTheme
     // Get 'post' or 'page' etc by id ("id" in wp db)
     function getEntryById($id, $type = 'post') {
 
-        $getPost = !empty($id) ? get_post($id, 'OBJECT', $type) : false;
+		$getPost = !empty($id) ? get_post($id, 'OBJECT', $type) : false;
 
 		return $getPost && $getPost->post_status == 'publish' ? $getPost : false;
     }
